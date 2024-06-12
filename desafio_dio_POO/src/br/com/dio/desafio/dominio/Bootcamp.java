@@ -29,18 +29,18 @@ public class Bootcamp extends Conteudo{
 		this.conteudos = conteudos;
 	}
 
-	@Override
-	public double calcularXP() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 	public LocalDate getDataInicio() {
 		return dataInicio;
 	}
 
 	public LocalDate getDataFim() {
 		return dataFim;
+	}
+	
+	@Override
+	public double calcularXP() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
@@ -60,5 +60,4 @@ public class Bootcamp extends Conteudo{
 		return Objects.equals(conteudos, other.conteudos) && Objects.equals(dataFim, other.dataFim)
 				&& Objects.equals(dataInicio, other.dataInicio) && Objects.equals(devsInscritos, other.devsInscritos);
 	}
-
 }

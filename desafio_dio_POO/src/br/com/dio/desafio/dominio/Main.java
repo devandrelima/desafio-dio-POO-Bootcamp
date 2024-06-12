@@ -5,6 +5,5 @@ public class Main {
 		Curso curso = new Curso();
 		Conteudo conteudo1 = new Curso();
 		Conteudo conteudo2 = new Mentoria();
-		
 	}
 }
