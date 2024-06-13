@@ -1,9 +1,13 @@
-package br.com.dio.desafio.dominio;
+package br.com.dio.desafio.ofertas;
 
 import java.time.LocalDate;
 
 public class Mentoria extends Conteudo {
 	
+	public Mentoria() {
+		super();
+	}
+
 	private LocalDate data;
 	
 	public LocalDate getData() {

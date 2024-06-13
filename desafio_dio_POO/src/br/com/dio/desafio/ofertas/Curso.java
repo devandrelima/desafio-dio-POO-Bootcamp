@@ -1,8 +1,15 @@
-package br.com.dio.desafio.dominio;
+package br.com.dio.desafio.ofertas;
 
 public class Curso extends Conteudo {
 
 	private int cargaHoraria;
+	
+	public Curso() {this.cargaHoraria = 60;}
+	
+	public Curso(String titulo) {
+		setTitulo(titulo);
+		this.cargaHoraria = 60;
+	}
 	
 	public int getCargaHoraria() {
 		return cargaHoraria;

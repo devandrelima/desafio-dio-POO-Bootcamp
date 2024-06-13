@@ -5,11 +5,19 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
+import br.com.dio.desafio.ofertas.Bootcamp;
+import br.com.dio.desafio.ofertas.Conteudo;
+
 public class Dev {
 	private String nome;
 	private Set<Conteudo> conteudoInscritos = new LinkedHashSet<>();
 	private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
 	
+	public Dev(String nome) {
+		super();
+		this.nome = nome;
+	}
+
 	public void inscreverBootcamp(Bootcamp bootcamp) {
 		this.conteudoInscritos.addAll(bootcamp.getConteudos());
 		bootcamp.getDevsInscritos().add(this);

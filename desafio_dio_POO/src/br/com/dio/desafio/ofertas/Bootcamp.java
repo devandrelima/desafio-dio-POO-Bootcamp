@@ -1,10 +1,12 @@
-package br.com.dio.desafio.dominio;
+package br.com.dio.desafio.ofertas;
 
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
+
+import br.com.dio.desafio.dominio.Dev;
 
 public class Bootcamp extends Conteudo{
 
@@ -37,6 +39,27 @@ public class Bootcamp extends Conteudo{
 		return dataFim;
 	}
 	
+	public void gerarRelatorio(int numRelatorio) {
+		System.out.println("\n\n	Relatório " + numRelatorio);
+		for(Dev desenvolvedor: this.getDevsInscritos()) {
+			System.out.println("\n-------- " + desenvolvedor.getNome() + " --------");
+			
+			System.out.println("XP: " + desenvolvedor.calcularTotalXp());
+			
+			System.out.println("\nCursos Inscritos: ");
+			desenvolvedor.getConteudoInscritos()
+				.stream()
+				.forEach(curso->System.out.println("- " + curso.getTitulo()));
+			System.out.println("\nCursos Concluídos: ");
+			if(desenvolvedor.getConteudosConcluidos().isEmpty()) {
+				System.out.println("[Vazio]");
+			} else {
+				desenvolvedor.getConteudosConcluidos()
+					.stream()
+					.forEach(curso-> System.out.println("- " + curso.getTitulo()));
+			}
+		}
+	}
 	@Override
 	public double calcularXP() {
 		// TODO Auto-generated method stub
